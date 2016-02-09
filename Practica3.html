@@ -1,0 +1,158 @@
+<!DOCTYPE HTML-->
+<html>
+<head>
+<link rel="stylesheet" href="css/jquery.mobile.structure-1.4.5.css"  />
+<link rel="stylesheet" href="css/jquery.mobile.theme-1.4.5.css" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.css" />
+<script type="text/javascript" src="js/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="js/jquery.mobile-1.4.5.min.js"></script>
+
+<style type="text/css">
+    #encabezado{
+        
+       text-align: center;
+       font-size:15px;
+       color:red;
+       font-weight: bold;
+       
+    }
+    #botones{
+        
+       text-align: center;
+       font-size:30px;
+       color:red;
+       font-weight: lighter;
+       background-color: transparent;
+       
+       
+    }
+</style>
+    
+<!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>-->
+
+<script type="text/javascript">
+$("document").ready(function inicio(){
+$("#btnSumar").tap(function(){
+var num=parseInt($("#txtNum1").val()); 
+var num2=parseInt($("#txtNum2").val()); 
+$("#txtRes").val(num+num2);
+});
+
+$("#btnRestar").tap(function(){
+var num=parseInt($("#txtNum3").val()); 
+var num2=parseInt($("#txtNum4").val()); 
+$("#txtRes2").val(num-num2);
+});
+
+$("#btnMultiplicar").tap(function(){
+var num=parseInt($("#txtNum5").val()); 
+var num2=parseInt($("#txtNum6").val()); 
+$("#txtRes3").val(num*num2);
+});
+
+
+$("#btnDividir").tap(function(){
+var num=parseInt($("#txtNum7").val()); 
+var num2=parseInt($("#txtNum8").val()); 
+$("#txtRes4").val(num/num2);
+});
+
+});    
+</script>
+</head>
+<body>
+
+<div data-role="page" id="principal" style="background-image:url(gh.jpg) ">
+    <div data-role="header">
+                 
+        <h1  id="encabezado" >calculadora</h1>
+             </div>
+              <div data-role="content">
+<p id="encabezado">Transiciones</p>
+
+<a id="botones" href="#Informacion_de_la_institucion" data-role="button" data-transition="slidefade" >Sumar</a>             
+<a id="botones" href="#informacion_personal" data-role="button" data-transition="slidefade">Restar</a>
+<a id="botones"  href="#calcular_promedio" data-role="button" data-transition="slidefade">Multiplicar</a>
+<a id="botones" href="#datos_de_interes" data-role="button" data-transition="slidefade">Dividir</a>
+
+          
+
+     </div>
+    
+    
+    
+<div data-role="footer">
+<p>pie de pagina</p>
+               </div>
+</div>
+
+<div data-role="page" id="Informacion_de_la_institucion" style="background-image:url(gh.jpg) " >
+             <div data-role="header">
+     <h1>Sumar</h1>
+             </div>
+            <div data-role="content">
+                  
+                   <input type="text"  id="txtNum1" placeholder="primer numero"/>
+                    <input type="text"  id="txtNum2" placeholder="segundo numero"/>
+                     <input type="text"  id="txtRes" placeholder="resultado"/>
+                     <input type="button"  id="btnSumar" value="Sumar" />
+
+  </div>             <div data-role="footer">
+<p>pie de pagina 2</p>
+               </div>
+</div>
+
+<div data-role="page" id="informacion_personal" style="background-image:url(gh.jpg) ">
+             <div data-role="header">
+     <h1>Restar</h1>
+             </div>
+                   <div data-role="content">
+                  
+                   <input type="text"  id="txtNum3" placeholder="primer numero"/>
+                    <input type="text"  id="txtNum4" placeholder="segundo numero"/>
+                     <input type="text"  id="txtRes2" placeholder="resultado"/>
+                     <input type="button"  id="btnRestar" value="Restar" />
+
+  </div>
+              <div data-role="footer">
+<p>pie de pagina 2</p>
+               </div>
+</div>
+    
+ <div data-role="page" id="calcular_promedio" style="background-image:url(gh.jpg) ">
+             <div data-role="header">
+     <h1>Multiplicar</h1>
+             </div>
+              <div data-role="content">
+                  
+                   <input type="text"  id="txtNum5" placeholder="primer numero"/>
+                    <input type="text"  id="txtNum6" placeholder="segundo numero"/>
+                     <input type="text"  id="txtRes3" placeholder="resultado"/>
+                     <input type="button"  id="btnMultiplicar" value="Multiplicar" />
+
+  </div>
+              <div data-role="footer">
+<p>pie de pagina 2</p>
+               </div>
+</div> 
+    
+<div data-role="page" id="datos_de_interes" style="background-image:url(gh.jpg) ">
+             <div data-role="header">
+     <h1>Dividir</h1>
+             </div>
+              <div data-role="content">
+                  
+                   <input type="text"  id="txtNum7" placeholder="primer numero"/>
+                    <input type="text"  id="txtNum8" placeholder="segundo numero"/>
+                     <input type="text"  id="txtRes4" placeholder="resultado"/>
+                     <input type="button"  id="btnDividir" value="Dividir" />
+
+  </div>
+              <div data-role="footer">
+<p>pie de pagina 2</p>
+               </div>
+</div>
+
+</html>
